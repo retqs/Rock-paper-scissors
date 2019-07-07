@@ -1,0 +1,44 @@
+.overlay {
+	display: none;
+	position:fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width:100%;
+	overflow: hidden;
+	background:rgba(104,104,104,.8);
+}
+
+
+.overlay-content {
+	background: #fff;
+	text-align: center;
+	margin: 10% auto;
+	width:350px;
+	border-radius: 10px;
+	padding: 3rem;
+	box-shadow: 0 1px 5px rgba(104,104,104,.8);
+	animation-name: overlayOpen;
+	animation-duration: 1s;
+}
+
+.overlay-content h1 {
+	margin-bottom: 1rem;
+}
+
+.overlay-content p {
+	font-size: 1.2rem;
+	margin-top:;
+}
+
+@keyframes overlayOpen {
+	from {
+	opacity: 0;
+	}
+
+	to {
+	opacity: 1;
+	}
+}
+

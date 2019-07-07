@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Skywalker';
+  src: url('Skywalker.ttf');
+}
+
+:root {
+	--mainColor:#f5f5f5;
+	--darkColor:#333;
+	--whiteColor:#fff;
+	--lose:#F1465B;
+	--win:#ADFF2F;
+	--shadow: 0 1px 5px rgba(104,104,104,.8);
+};
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+}
+
+body {
+	font-family: 'Skywalker';
+	background:var(--mainColor);
+	line-height: 1.6;
+	color:var(--darkColor);
+}
+
+.container {
+	max-width:1100px;
+	margin:auto;
+	padding: 8rem 10px;
+	overflow:hidden;
+	text-align:center;
+}
+
+.restart-btn {
+	display:none;
+	background:var(--darkColor);
+	color:var(--whiteColor);
+	padding: .4rem 1.3rem;
+	font-size: 1rem;
+	cursor:pointer;
+	outline:none;
+	border:none;
+	transition: .5s;
+}
+
+.restart-btn:hover {
+	background: var(--whiteColor);
+	color:var(--darkColor);
+	box-shadow: var(--shadow);
+} 
+
+.header {
+	text-align:center;
+	margin: 1rem 0;
+}
+
+.header h1 {
+	margin-bottom: 1rem;
+}
+
+.score {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 10px;
+	font-size: 2rem;
+	color:var(--darkColor);
+}
+
+.score p:first-child {
+	background:var(--whiteColor);
+	box-shadow: var(--shadow);
+}
+
+.score p:last-child {
+	background:var(--whiteColor);
+	box-shadow: var(--shadow);
+}
+
+.choices {
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap:2rem;
+	margin-top: 3rem;
+	text-align:center;
+}
+
+.choice {
+	cursor:pointer;
+}
+
+.choice:hover {
+	color:var(--lose);
+}
+
+.text-win {
+	color:var(--win);
+}
+
+.text-lose {
+	color:var(--lose);
+}
+
+@media (max-width: 1024px) {
+	.choice {
+		font-size:110px;
+	}
+}
+
+@media (max-width: 724px) {
+	.choice {
+		font-size:80px;
+	}
+}
